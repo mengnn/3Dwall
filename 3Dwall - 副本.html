@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D墙</title>
+    <meta name="description">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/wall.css">
+    <link rel="stylesheet" href="css/Wechat-wall.css">
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+
+
+</head>
+<body>
+
+
+    <input id="WXSignPageSize" name="WXSignPageSize" type="hidden" value="4">
+    &gt;<input id="WXSignLasyMilliseconds" name="WXSignLasyMilliseconds" type="hidden" value="1000">
+    <input id="WXSignId" name="WXSignId" type="hidden" value="815537912">
+    <input id="prevwall" name="prevwall" type="hidden">
+    <input name="IsPreview" id="IsPreview" type="hidden" value="">
+    <div id="container">
+
+    </div>
+    <script src="js/three.min.js"></script>
+    <script src="js/tween.min.js"></script>
+    <script src="js/TrackballControls.js"></script>
+    <script src="js/CSS3DRenderer.js"></script>
+    <script type="text/javascript">
+        window.enc = "2aa91fb43fda68baa652227aa2ecc29a";
+
+        var logoWall = $.parseJSON("{\"WallId\":815537912,\"WallName\":\"111\",\"WallType\":30,\"DeadLine\":\"2017-07-07T11:30:46.338+08:00\",\"HeadSourceType\":0,\"EventId\":null,\"EventTitle\":null,\"ScanSpots\":[],\"WinXinWallId\":null,\"WinXinWallName\":null,\"UserId\":336375011,\"PayLevel\":0,\"Wall2DSetting\":{\"BgImage\":\"http://newstatic.31huiyi.com/img/wallCheckin/bg-2016-mokey.png\",\"ShowTime\":3,\"FillSpeed\":3,\"FillDirection\":0,\"IsRepeatFill\":false,\"RepeatFillTime\":0,\"IsShowCurtain\":false,\"CurtainImageURL\":null,\"GridSize\":0,\"LogoSetting\":\"[{x:17,y:2},{x:18,y:2},{x:15,y:3},{x:16,y:3},{x:17,y:3},{x:18,y:3},{x:19,y:3},{x:15,y:4},{x:16,y:4},{x:17,y:4},{x:18,y:4},{x:19,y:4},{x:20,y:4},{x:15,y:5},{x:16,y:5},{x:17,y:5},{x:18,y:5},{x:19,y:5},{x:20,y:5},{x:12,y:6},{x:13,y:6},{x:15,y:6},{x:16,y:6},{x:17,y:6},{x:18,y:6},{x:19,y:6},{x:20,y:6},{x:11,y:7},{x:12,y:7},{x:13,y:7},{x:14,y:7},{x:15,y:7},{x:16,y:7},{x:17,y:7},{x:18,y:7},{x:19,y:7},{x:11,y:8},{x:12,y:8},{x:13,y:8},{x:14,y:8},{x:16,y:8},{x:17,y:8},{x:18,y:8},{x:19,y:8},{x:20,y:8},{x:21,y:8},{x:11,y:9},{x:12,y:9},{x:13,y:9},{x:14,y:9},{x:15,y:9},{x:16,y:9},{x:17,y:9},{x:18,y:9},{x:19,y:9},{x:20,y:9},{x:21,y:9},{x:22,y:9},{x:10,y:10},{x:11,y:10},{x:12,y:10},{x:13,y:10},{x:14,y:10},{x:15,y:10},{x:16,y:10},{x:17,y:10},{x:18,y:10},{x:19,y:10},{x:20,y:10},{x:21,y:10},{x:22,y:10},{x:10,y:11},{x:11,y:11},{x:13,y:11},{x:16,y:11},{x:17,y:11},{x:18,y:11},{x:19,y:11},{x:20,y:11},{x:21,y:11},{x:22,y:11},{x:14,y:12},{x:15,y:12},{x:16,y:12},{x:17,y:12},{x:18,y:12},{x:19,y:12},{x:20,y:12},{x:21,y:12},{x:15,y:13},{x:16,y:13},{x:17,y:13},{x:18,y:13},{x:19,y:13},{x:20,y:13},{x:21,y:13}]\",\"MaxX\":32,\"MaxY\":18},\"Wall3DSetting\":{\"BGType\":0,\"BgImage\":\"\",\"BgColor\":\"\",\"ShowTypes\":[0],\"ChangeSecond\":5,\"LogoType\":0,\"CustomImage\":\"\",\"IsRepeatFill\":false,\"RepeatFillTime\":1,\"BeginTime\":null,\"AreaSize\":1000,\"LogoSetting\":\"[{x:1,y:1},{x:2,y:1},{x:3,y:1},{x:4,y:1},{x:5,y:1},{x:6,y:1},{x:7,y:1},{x:8,y:1},{x:9,y:1},{x:10,y:1},{x:11,y:1},{x:12,y:1},{x:13,y:1},{x:14,y:1},{x:15,y:1},{x:16,y:1},{x:17,y:1},{x:18,y:1},{x:19,y:1},{x:20,y:1},{x:1,y:2},{x:2,y:2},{x:3,y:2},{x:4,y:2},{x:5,y:2},{x:6,y:2},{x:7,y:2},{x:8,y:2},{x:9,y:2},{x:10,y:2},{x:11,y:2},{x:12,y:2},{x:13,y:2},{x:14,y:2},{x:15,y:2},{x:16,y:2},{x:17,y:2},{x:18,y:2},{x:19,y:2},{x:20,y:2},{x:1,y:3},{x:2,y:3},{x:3,y:3},{x:4,y:3},{x:5,y:3},{x:6,y:3},{x:7,y:3},{x:8,y:3},{x:9,y:3},{x:10,y:3},{x:11,y:3},{x:12,y:3},{x:13,y:3},{x:14,y:3},{x:15,y:3},{x:16,y:3},{x:17,y:3},{x:18,y:3},{x:19,y:3},{x:20,y:3},{x:1,y:4},{x:2,y:4},{x:3,y:4},{x:4,y:4},{x:5,y:4},{x:6,y:4},{x:7,y:4},{x:8,y:4},{x:9,y:4},{x:10,y:4},{x:11,y:4},{x:12,y:4},{x:13,y:4},{x:14,y:4},{x:15,y:4},{x:16,y:4},{x:17,y:4},{x:18,y:4},{x:19,y:4},{x:20,y:4},{x:1,y:5},{x:2,y:5},{x:3,y:5},{x:4,y:5},{x:5,y:5},{x:6,y:5},{x:7,y:5},{x:8,y:5},{x:9,y:5},{x:10,y:5},{x:11,y:5},{x:12,y:5},{x:13,y:5},{x:14,y:5},{x:15,y:5},{x:16,y:5},{x:17,y:5},{x:18,y:5},{x:19,y:5},{x:20,y:5},{x:1,y:6},{x:2,y:6},{x:3,y:6},{x:4,y:6},{x:5,y:6},{x:6,y:6},{x:7,y:6},{x:8,y:6},{x:9,y:6},{x:10,y:6},{x:11,y:6},{x:12,y:6},{x:13,y:6},{x:14,y:6},{x:15,y:6},{x:16,y:6},{x:17,y:6},{x:18,y:6},{x:19,y:6},{x:20,y:6},{x:1,y:7},{x:2,y:7},{x:3,y:7},{x:4,y:7},{x:5,y:7},{x:6,y:7},{x:7,y:7},{x:8,y:7},{x:9,y:7},{x:10,y:7},{x:11,y:7},{x:12,y:7},{x:13,y:7},{x:14,y:7},{x:15,y:7},{x:16,y:7},{x:17,y:7},{x:18,y:7},{x:19,y:7},{x:20,y:7},{x:1,y:8},{x:2,y:8},{x:3,y:8},{x:4,y:8},{x:5,y:8},{x:6,y:8},{x:7,y:8},{x:8,y:8},{x:9,y:8},{x:10,y:8},{x:11,y:8},{x:12,y:8},{x:13,y:8},{x:14,y:8},{x:15,y:8},{x:16,y:8},{x:17,y:8},{x:18,y:8},{x:19,y:8},{x:20,y:8},{x:1,y:9},{x:2,y:9},{x:3,y:9},{x:4,y:9},{x:5,y:9},{x:6,y:9},{x:7,y:9},{x:8,y:9},{x:9,y:9},{x:10,y:9},{x:11,y:9},{x:12,y:9},{x:13,y:9},{x:14,y:9},{x:15,y:9},{x:16,y:9},{x:17,y:9},{x:18,y:9},{x:19,y:9},{x:20,y:9},{x:1,y:10},{x:2,y:10},{x:3,y:10},{x:4,y:10},{x:5,y:10},{x:6,y:10},{x:7,y:10},{x:8,y:10},{x:9,y:10},{x:10,y:10},{x:11,y:10},{x:12,y:10},{x:13,y:10},{x:14,y:10},{x:15,y:10},{x:16,y:10},{x:17,y:10},{x:18,y:10},{x:19,y:10},{x:20,y:10},{x:1,y:11},{x:2,y:11},{x:3,y:11},{x:4,y:11},{x:5,y:11},{x:6,y:11},{x:7,y:11},{x:8,y:11},{x:9,y:11},{x:10,y:11},{x:11,y:11},{x:12,y:11},{x:13,y:11},{x:14,y:11},{x:15,y:11},{x:16,y:11},{x:17,y:11},{x:18,y:11},{x:19,y:11},{x:20,y:11},{x:1,y:12},{x:2,y:12},{x:3,y:12},{x:4,y:12},{x:5,y:12},{x:6,y:12},{x:7,y:12},{x:8,y:12},{x:9,y:12},{x:10,y:12},{x:11,y:12},{x:12,y:12},{x:13,y:12},{x:14,y:12},{x:15,y:12},{x:16,y:12},{x:17,y:12},{x:18,y:12},{x:19,y:12},{x:20,y:12},{x:1,y:13},{x:2,y:13},{x:3,y:13},{x:4,y:13},{x:5,y:13},{x:6,y:13},{x:7,y:13},{x:8,y:13},{x:9,y:13},{x:10,y:13},{x:11,y:13},{x:12,y:13},{x:13,y:13},{x:14,y:13},{x:15,y:13},{x:16,y:13},{x:17,y:13},{x:18,y:13},{x:19,y:13},{x:20,y:13},{x:1,y:14},{x:2,y:14},{x:3,y:14},{x:4,y:14},{x:5,y:14},{x:6,y:14},{x:7,y:14},{x:8,y:14},{x:9,y:14},{x:10,y:14},{x:11,y:14},{x:12,y:14},{x:13,y:14},{x:14,y:14},{x:15,y:14},{x:16,y:14},{x:17,y:14},{x:18,y:14},{x:19,y:14},{x:20,y:14},{x:1,y:15},{x:2,y:15},{x:3,y:15},{x:4,y:15},{x:5,y:15},{x:6,y:15},{x:7,y:15},{x:8,y:15},{x:9,y:15},{x:10,y:15},{x:11,y:15},{x:12,y:15},{x:13,y:15},{x:14,y:15},{x:15,y:15},{x:16,y:15},{x:17,y:15},{x:18,y:15},{x:19,y:15},{x:20,y:15},{x:1,y:16},{x:2,y:16},{x:3,y:16},{x:4,y:16},{x:5,y:16},{x:6,y:16},{x:7,y:16},{x:8,y:16},{x:9,y:16},{x:10,y:16},{x:11,y:16},{x:12,y:16},{x:13,y:16},{x:14,y:16},{x:15,y:16},{x:16,y:16},{x:17,y:16},{x:18,y:16},{x:19,y:16},{x:20,y:16},{x:1,y:17},{x:2,y:17},{x:3,y:17},{x:4,y:17},{x:5,y:17},{x:6,y:17},{x:7,y:17},{x:8,y:17},{x:9,y:17},{x:10,y:17},{x:11,y:17},{x:12,y:17},{x:13,y:17},{x:14,y:17},{x:15,y:17},{x:16,y:17},{x:17,y:17},{x:18,y:17},{x:19,y:17},{x:20,y:17},{x:1,y:18},{x:2,y:18},{x:3,y:18},{x:4,y:18},{x:5,y:18},{x:6,y:18},{x:7,y:18},{x:8,y:18},{x:9,y:18},{x:10,y:18},{x:11,y:18},{x:12,y:18},{x:13,y:18},{x:14,y:18},{x:15,y:18},{x:16,y:18},{x:17,y:18},{x:18,y:18},{x:19,y:18},{x:20,y:18},{x:1,y:19},{x:2,y:19},{x:3,y:19},{x:4,y:19},{x:5,y:19},{x:6,y:19},{x:7,y:19},{x:8,y:19},{x:9,y:19},{x:10,y:19},{x:11,y:19},{x:12,y:19},{x:13,y:19},{x:14,y:19},{x:15,y:19},{x:16,y:19},{x:17,y:19},{x:18,y:19},{x:19,y:19},{x:20,y:19},{x:1,y:20},{x:2,y:20},{x:3,y:20},{x:4,y:20},{x:5,y:20},{x:6,y:20},{x:7,y:20},{x:8,y:20},{x:9,y:20},{x:10,y:20},{x:11,y:20},{x:12,y:20},{x:13,y:20},{x:14,y:20},{x:15,y:20},{x:16,y:20},{x:17,y:20},{x:18,y:20},{x:19,y:20},{x:20,y:20},{x:21,y:1},{x:21,y:2},{x:21,y:3},{x:21,y:4},{x:21,y:5},{x:21,y:6},{x:21,y:7},{x:21,y:8},{x:21,y:9},{x:21,y:10},{x:21,y:11},{x:21,y:12},{x:21,y:13},{x:21,y:14},{x:21,y:15},{x:21,y:16},{x:21,y:17},{x:21,y:18},{x:21,y:19},{x:21,y:20},{x:22,y:1},{x:22,y:2},{x:22,y:3},{x:22,y:4},{x:22,y:5},{x:22,y:6},{x:22,y:7},{x:22,y:8},{x:22,y:9},{x:22,y:10},{x:22,y:11},{x:22,y:12},{x:22,y:13},{x:22,y:14},{x:22,y:15},{x:22,y:16},{x:22,y:17},{x:22,y:18},{x:22,y:19},{x:22,y:20},{x:23,y:1},{x:23,y:2},{x:23,y:3},{x:23,y:4},{x:23,y:5},{x:23,y:6},{x:23,y:7},{x:23,y:8},{x:23,y:9},{x:23,y:10},{x:23,y:11},{x:23,y:12},{x:23,y:13},{x:23,y:14},{x:23,y:15},{x:23,y:16},{x:23,y:17},{x:23,y:18},{x:23,y:19},{x:23,y:20}]\",\"LogoBackgroundImageURL\":\"\",\"GridSize\":0},\"Wall3DIPadSetting\":{\"BgImage\":\"/Uploads/Files/2016/07/20/636046092762379703.jpg\",\"ShowTypes\":[],\"WatchWordStyle\":0,\"WatchWordContentList\":[],\"CountDownImageList\":[],\"CountDown\":0,\"ChangeSecond\":180,\"ShowTime\":3},\"Wall3DWebSetting\":{\"BgImage\":null,\"CustomImage\":null,\"IconImage\":null,\"ShowTypes\":null,\"PrecisionSetting\":0,\"ChangeSecond\":0,\"AnimatedSecond\":0.0,\"SpinSecond\":0.0},\"ScrmCompanyId\":336378111,\"CustomerJS\":null,\"CustomerCSS\":null,\"AuthUserSettingId\":0,\"CreateTime\":\"2017-06-07T11:30:46.338+08:00\",\"UpdateTime\":\"2017-07-11T16:52:32.367+08:00\",\"NeedChangeFieldNames\":null,\"DbBackupHistoryLogId\":0,\"NotNeedRecordDbOperatingHistoryLog\":false,\"_id\":\"5937736663419952843d2f65\",\"__v\":7,\"IsDeleted\":false}");
+
+        //3d配置
+        var WX3DWallSetting = logoWall.Wall3DSetting;
+
+        //标准墙配置
+        //var WXSignInWallSetting = wxSign.WXSignInWallSetting;
+        //var WXWelcomeWallSetting = wxSign.WXWelcomeWallSetting;
+    </script>
+    <script src="js/WallApp.js"></script>
+    <!-- <script src="js/Wecht-wall.js"></script>
+    <script src="js/Wall3D.js"></script> -->
+
+    <div id="cli_dialog_div"></div>
+    <!-- <img class="signimg img-animate" src="http://file.31huiyi.com//Uploads/UserFaces/2015/08/06/171701/14130.jpg"> -->
+    <!-- <audio  autoplay="autoplay" loop="loop">
+      <source src="audio/He Is A Pirate.mp3" />
+    </audio> -->
+    <script>
+      var num=["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","sd.jpg","9.jpg","10.jpg","11.jpg","14130.jpg"];
+      var i=0;
+      function creatImg(){
+        if(i<num.length){
+            var $I = $('<img class="signimg" src="images/' + num[i] + '">');
+            var $II = $('<img src="images/' + num[i] + '">');
+            $('body').append($I);
+            $('#container>div>div').find(".element").eq(i).append($II);
+            $I.addClass('img-animate');
+            i++;
+        }
+      }
+     var creatTimer=  window.setInterval(function(){
+        creatImg();
+        var g=$(".signimg").length;
+        //console.log(g)
+         if(g==num.length){
+          clearInterval(creatTimer);
+         }
+      },3000);
+
+
+    </script>
+
+</body>
+</html>

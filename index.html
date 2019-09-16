@@ -1,0 +1,99 @@
+﻿
+<!DOCTYPE html>
+<html   lang="zh"
+      >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>111-3D墙-31会议</title>
+    <meta name="keywords" />
+    <meta name="description" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="http://newstatic.31huiyi.com/css/eventMobile/bootstrap.min.css?v=v2016_03_02_01894349">
+    <link rel="stylesheet" type="text/css" href="http://newstatic.31huiyi.com/ExternalFiles/www/css/notyfy.css?v=v2016_03_02_01894349">
+
+    <script src="http://newstatic.31huiyi.com/app/eventMobile/jquery-1.9.1.min.js?v=v2016_03_02_01894349" type="text/javascript"></script>
+    <!-- 初始化站点地址-->
+    
+<script type="text/javascript">
+    
+    //初始化站点地址
+    window.WWWSite = "http://www.31huiyi.com";
+    window.Event31huiyiSiteUri = "http://event.31huiyi.com";
+    window.EventMSiteUri = "http://event.3188.la";
+    window.CorpSiteUrl = "http://corp.31huiyi.com";
+    window.StaticUrl = "http://newstatic.31huiyi.com";
+    window.FileDomain = "http://file.31huiyi.com"+"";
+    window.NewFileDomain = "http://newfile.31huiyi.com";
+    window.MeiJia31Url = "http://www.31meijia.com/";
+    window.SSODomain = "http://sso.31huiyi.com";
+    window.UserDomain = "http://user.31huiyi.com";
+    window.PaySiteUrl = "http://pay.31huiyi.com";
+    window.RewardUrl = "http://reward.31huiyi.com";
+
+</script>
+    
+    
+<link href="http://newstatic.31huiyi.com/css/wallcheckin/tdwall.css?v=v2016_03_02_01894349" type="text/css" rel="stylesheet" />
+    <link href="http://newstatic.31huiyi.com/css/wallcheckin/tdwall.css?v=v2016_03_02_01894349" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+    
+    
+
+<input id="WXSignPageSize" name="WXSignPageSize" type="hidden" value="4" />
+
+><input id="WXSignLasyMilliseconds" name="WXSignLasyMilliseconds" type="hidden" value="1000" />
+<input id="WXSignId" name="WXSignId" type="hidden" value="815537912" />
+<input id="prevwall" name="prevwall" type="hidden" />
+<input name="IsPreview" id="IsPreview" type="hidden" value="" />
+<div id="container"></div>
+
+  
+
+    
+    
+
+<script type="text/javascript">
+
+    var currentDomain = "";
+    var wwwDomain = "http://www.31huiyi.com";
+    var logoWallDomain = "";
+ 
+    var newstaticDomain = "http://newstatic.31huiyi.com";
+
+    var fileDomain = "http://file.31huiyi.com";
+</script>
+
+    <script src="http://newstatic.31huiyi.com/app/eventMobile/3d/three.min.js?v=v2016_03_02_01894349"></script>
+    <script src="http://newstatic.31huiyi.com/app/eventMobile/3d/tween.min.js?v=v2016_03_02_01894349"></script>
+    <script src="http://newstatic.31huiyi.com/app/eventMobile/3d/TrackballControls.js?v=v2016_03_02_01894349"></script>
+    <script src="http://newstatic.31huiyi.com/app/eventMobile/3d/CSS3DRenderer.js?v=v2016_03_02_01894349"></script>
+    <script type="text/javascript">
+        window.enc = "2aa91fb43fda68baa652227aa2ecc29a";
+
+        var logoWall = $.parseJSON("{\"WallId\":815537912,\"WallName\":\"111\",\"WallType\":30,\"DeadLine\":\"2017-07-07T11:30:46.338+08:00\",\"HeadSourceType\":0,\"EventId\":null,\"EventTitle\":null,\"ScanSpots\":[],\"WinXinWallId\":null,\"WinXinWallName\":null,\"UserId\":336375011,\"PayLevel\":0,\"Wall2DSetting\":{\"BgImage\":\"http://newstatic.31huiyi.com/img/wallCheckin/bg-2016-mokey.png\",\"ShowTime\":3,\"FillSpeed\":3,\"FillDirection\":0,\"IsRepeatFill\":false,\"RepeatFillTime\":0,\"IsShowCurtain\":false,\"CurtainImageURL\":null,\"GridSize\":0,\"LogoSetting\":\"[{x:17,y:2},{x:18,y:2},{x:15,y:3},{x:16,y:3},{x:17,y:3},{x:18,y:3},{x:19,y:3},{x:15,y:4},{x:16,y:4},{x:17,y:4},{x:18,y:4},{x:19,y:4},{x:20,y:4},{x:15,y:5},{x:16,y:5},{x:17,y:5},{x:18,y:5},{x:19,y:5},{x:20,y:5},{x:12,y:6},{x:13,y:6},{x:15,y:6},{x:16,y:6},{x:17,y:6},{x:18,y:6},{x:19,y:6},{x:20,y:6},{x:11,y:7},{x:12,y:7},{x:13,y:7},{x:14,y:7},{x:15,y:7},{x:16,y:7},{x:17,y:7},{x:18,y:7},{x:19,y:7},{x:11,y:8},{x:12,y:8},{x:13,y:8},{x:14,y:8},{x:16,y:8},{x:17,y:8},{x:18,y:8},{x:19,y:8},{x:20,y:8},{x:21,y:8},{x:11,y:9},{x:12,y:9},{x:13,y:9},{x:14,y:9},{x:15,y:9},{x:16,y:9},{x:17,y:9},{x:18,y:9},{x:19,y:9},{x:20,y:9},{x:21,y:9},{x:22,y:9},{x:10,y:10},{x:11,y:10},{x:12,y:10},{x:13,y:10},{x:14,y:10},{x:15,y:10},{x:16,y:10},{x:17,y:10},{x:18,y:10},{x:19,y:10},{x:20,y:10},{x:21,y:10},{x:22,y:10},{x:10,y:11},{x:11,y:11},{x:13,y:11},{x:16,y:11},{x:17,y:11},{x:18,y:11},{x:19,y:11},{x:20,y:11},{x:21,y:11},{x:22,y:11},{x:14,y:12},{x:15,y:12},{x:16,y:12},{x:17,y:12},{x:18,y:12},{x:19,y:12},{x:20,y:12},{x:21,y:12},{x:15,y:13},{x:16,y:13},{x:17,y:13},{x:18,y:13},{x:19,y:13},{x:20,y:13},{x:21,y:13}]\",\"MaxX\":32,\"MaxY\":18},\"Wall3DSetting\":{\"BGType\":0,\"BgImage\":\"\",\"BgColor\":\"\",\"ShowTypes\":[0],\"ChangeSecond\":5,\"LogoType\":0,\"CustomImage\":\"\",\"IsRepeatFill\":false,\"RepeatFillTime\":1,\"BeginTime\":null,\"AreaSize\":1000,\"LogoSetting\":\"[{x:5,y:3},{x:6,y:3},{x:7,y:3},{x:8,y:3},{x:9,y:3},{x:10,y:3},{x:11,y:3},{x:12,y:3},{x:15,y:3},{x:16,y:3},{x:5,y:4},{x:6,y:4},{x:7,y:4},{x:8,y:4},{x:9,y:4},{x:10,y:4},{x:11,y:4},{x:12,y:4},{x:15,y:4},{x:16,y:4},{x:11,y:5},{x:12,y:5},{x:15,y:5},{x:16,y:5},{x:11,y:6},{x:12,y:6},{x:15,y:6},{x:16,y:6},{x:11,y:7},{x:12,y:7},{x:15,y:7},{x:16,y:7},{x:5,y:8},{x:6,y:8},{x:7,y:8},{x:8,y:8},{x:9,y:8},{x:10,y:8},{x:11,y:8},{x:12,y:8},{x:15,y:8},{x:16,y:8},{x:5,y:9},{x:6,y:9},{x:7,y:9},{x:8,y:9},{x:9,y:9},{x:10,y:9},{x:11,y:9},{x:12,y:9},{x:15,y:9},{x:16,y:9},{x:11,y:10},{x:12,y:10},{x:15,y:10},{x:16,y:10},{x:11,y:11},{x:12,y:11},{x:15,y:11},{x:16,y:11},{x:11,y:12},{x:12,y:12},{x:15,y:12},{x:16,y:12},{x:5,y:13},{x:6,y:13},{x:7,y:13},{x:8,y:13},{x:9,y:13},{x:10,y:13},{x:11,y:13},{x:12,y:13},{x:15,y:13},{x:16,y:13},{x:5,y:14},{x:6,y:14},{x:7,y:14},{x:8,y:14},{x:9,y:14},{x:10,y:14},{x:11,y:14},{x:12,y:14},{x:15,y:14},{x:16,y:14}]\",\"LogoBackgroundImageURL\":\"\",\"GridSize\":0},\"Wall3DIPadSetting\":{\"BgImage\":\"Uploads/Files/2016/07/20/636046092762379703.jpg\",\"ShowTypes\":[],\"WatchWordStyle\":0,\"WatchWordContentList\":[],\"CountDownImageList\":[],\"CountDown\":0,\"ChangeSecond\":180,\"ShowTime\":3},\"Wall3DWebSetting\":{\"BgImage\":null,\"CustomImage\":null,\"IconImage\":null,\"ShowTypes\":null,\"PrecisionSetting\":0,\"ChangeSecond\":0,\"AnimatedSecond\":0.0,\"SpinSecond\":0.0},\"ScrmCompanyId\":336378111,\"CustomerJS\":null,\"CustomerCSS\":null,\"AuthUserSettingId\":0,\"CreateTime\":\"2017-06-07T11:30:46.338+08:00\",\"UpdateTime\":\"2017-07-11T16:52:32.367+08:00\",\"NeedChangeFieldNames\":null,\"DbBackupHistoryLogId\":0,\"NotNeedRecordDbOperatingHistoryLog\":false,\"_id\":\"5937736663419952843d2f65\",\"__v\":7,\"IsDeleted\":false}");
+        //3d配置
+        var WX3DWallSetting = logoWall.Wall3DSetting;
+
+        ////标准墙配置
+        //var WXSignInWallSetting = wxSign.WXSignInWallSetting;
+        //var WXWelcomeWallSetting = wxSign.WXWelcomeWallSetting;
+    </script>
+    
+    <script src="http://newstatic.31huiyi.com/app/logowall/3d/app.js?v=v2016_03_02_01894349"></script>
+   
+    <script src="http://newstatic.31huiyi.com/app/logowall/wall/WallJoinProvider2.js?v=v2016_03_02_01894349"></script>
+   
+    <script src="http://newstatic.31huiyi.com/app/logowall/3d/wall_3d.js?v=v2016_03_02_01894349"></script>
+
+
+
+</body>
+</html>
+
